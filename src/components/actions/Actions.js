@@ -3,7 +3,7 @@ import constants from "../constants/constants";
 
 export default {
   addItem(item) {
-    console.log(item);
+    // console.log(item);
     dispatch({ actionType: constants.ADD_ITEM, item });
   },
   removeItem(item) {
