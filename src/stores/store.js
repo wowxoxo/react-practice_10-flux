@@ -79,7 +79,7 @@ const AppStore = Object.assign(EventEmitter.prototype, {
   // add public methods for cart, catalog, totals
 
   getCart() {
-    return _cartItems();
+    return _cartItems;
   },
 
   getCatalog() {
