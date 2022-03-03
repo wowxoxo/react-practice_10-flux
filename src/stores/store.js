@@ -65,7 +65,7 @@ const _cartTotals = () => {
 
 const AppStore = Object.assign(EventEmitter.prototype, {
   emitChange() {
-    this.emitChange(CHANGE_EVENT);
+    this.emit(CHANGE_EVENT);
   },
 
   addChangeListener(callback) {

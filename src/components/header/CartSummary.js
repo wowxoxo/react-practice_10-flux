@@ -1,13 +1,16 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import StoreWatchMixin from "../../mixins/StoreWatchMixin";
+import AppStore from "../../stores/store";
 
 const CartSummary = (props) => {
   return (
     <div style={{ paddingTop: 15 }}>
-      <a href="#" className="btn btn-success">
+      <Link to="/cart" className="btn btn-success">
         {`Cart Items: ${props.qty} / $${props.total}`}
-      </a>
+      </Link>
     </div>
   );
 };
 
-export default CartSummary;
+export default StoreWatchMixin(CartSummary, AppStore.getCartTotals);
